@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Pinyon+Script&display=swap");
+@import "tailwindcss";
+
+/* Plugin */
+@plugin "tailwindcss-animate";
+
+/* Theme (replaces tailwind.config.ts) */
+@theme {
+  /* Colors (mapped from your HSL variables) */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-nav: hsl(var(--nav-bg));
+  --color-nav-foreground: hsl(var(--nav-foreground));
+
+  --color-countdown: hsl(var(--countdown-bg));
+  --color-countdown-foreground: hsl(var(--countdown-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Fonts */
+  --font-script: "Pinyon Script", cursive;
+  --font-serif: "Piazzolla", serif;
+
+  /* Border radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* Base variables (unchanged from your original) */
+:root {
+  --background: 120 20% 87%;
+  --foreground: 120 10% 20%;
+
+  --card: 120 20% 92%;
+  --card-foreground: 120 10% 20%;
+
+  --popover: 120 20% 92%;
+  --popover-foreground: 120 10% 20%;
+
+  --primary: 43 50% 42%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 120 15% 35%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 120 15% 82%;
+  --muted-foreground: 120 8% 40%;
+
+  --accent: 120 15% 60%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 120 15% 75%;
+  --input: 0 0% 100%;
+  --ring: 43 50% 42%;
+
+  --radius: 0.5rem;
+
+  --nav-bg: 120 15% 30%;
+  --nav-foreground: 120 20% 87%;
+
+  --countdown-bg: 120 12% 60%;
+  --countdown-foreground: 0 0% 100%;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+/* Base styles */
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-serif);
+}
+
+/* Custom utility classes */
+.font-script {
+  font-family: var(--font-script);
+  line-height: 1.25;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Metallic gradient for text-primary */
+.text-primary {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    90deg,
+    #b8902d, /* darker version of #d4af37 */
+    #bfb38a, /* darker version of #ded2aa */
+    #946f44, /* darker version of #b08d57 */
+    #bfb38a, /* darker version of #ded2aa */
+    #b8902d  /* darker version of #d4af37 */
+  );
+}
+
+/* Animations (migrated from config) */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
