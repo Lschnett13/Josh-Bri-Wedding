@@ -49,7 +49,7 @@ const FAQ = () => {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
           {faqs.map((faq) => (
             <div key={faq.question} className="text-center">
-              <h3 className="font-script text-primary text-xl md:text-2xl underline underline-offset-4 decoration-primary/40">
+              <h3 className="font-script text-flat-gold text-xl md:text-2xl underline underline-offset-4 decoration-flat-gold/40">
                 {faq.question}
               </h3>
               <p className="font-serif text-foreground mt-3 text-sm md:text-base whitespace-pre-line leading-relaxed">

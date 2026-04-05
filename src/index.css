@@ -50,6 +50,8 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
+  --color-flat-gold: #b8902d;
+
   /* Fonts */
   --font-script: "Pinyon Script", cursive;
   --font-serif: "Piazzolla", serif;
