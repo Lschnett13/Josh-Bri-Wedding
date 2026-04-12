@@ -1,12 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
-
-const MOCK_GUESTS = {
-  "Lauren Green": ["Lauren Green", "Timothy Green"],
-  "Timothy Green": ["Lauren Green", "Timothy Green"],
-  "Sarah Johnson": ["Sarah Johnson", "Mike Johnson"],
-  "Mike Johnson": ["Sarah Johnson", "Mike Johnson"],
-};
+import MOCK_GUESTS from "../guest_list.json";
 
 const RSVP = () => {
   const [selectedName, setSelectedName] = useState("");
