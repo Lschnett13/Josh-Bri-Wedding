@@ -69,7 +69,7 @@ const RSVP = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(formData),
       });
-    } catch (err) {
+    } catch {
       console.log("Local dev - no Netlify backend");
     }
 
