@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 @import "tailwindcss";
 
 /* Plugin */
@@ -50,11 +51,13 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
-  --color-flat-gold: #b8902d;
+  --color-flat-gold: #946f44;
+  /* --color-flat-gold: #b8902d; */
 
   /* Fonts */
   --font-script: "Pinyon Script", cursive;
   --font-serif: "Piazzolla", serif;
+  --font-script2: "Parisienne", cursive;
 
   /* Border radius */
   --radius-lg: var(--radius);
@@ -123,6 +126,11 @@ body {
 /* Custom utility classes */
 .font-script {
   font-family: var(--font-script);
+  line-height: 1.25;
+}
+
+.font-script-2 {
+  font-family: var(--font-script2);
   line-height: 1.25;
 }
 
