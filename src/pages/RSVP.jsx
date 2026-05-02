@@ -11,6 +11,9 @@ const RSVP = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [showConfirm, setShowConfirm] = useState(false);
+  const [dietary, setDietary] = useState("");
+  const [songs, setSongs] = useState("");
+  const [comments, setComments] = useState("");
 
   const allNames = Object.keys(MOCK_GUESTS);
   const filteredNames = allNames.filter((n) =>
@@ -121,6 +124,9 @@ const RSVP = () => {
             .filter((m) => !checkedMembers.has(m))
             .join(", ")}
         />
+        <input type="hidden" name="dietary" value={dietary} />
+        <input type="hidden" name="songs" value={songs} />
+        <input type="hidden" name="comments" value={comments} />
 
         <h1 className="text-center font-serif text-foreground text-4xl md:text-6xl tracking-[0.4em] font-light">
           R S V P
@@ -162,7 +168,7 @@ const RSVP = () => {
                 />
 
                 <div className="max-h-40 overflow-y-auto">
-                  {filteredNames.map((name) => (
+                  {search.trim() !== "" && filteredNames.map((name) => (
                     <button
                       type="button"
                       key={name}
@@ -221,6 +227,48 @@ const RSVP = () => {
           />
         </div>
 
+        {/* Dietary Restrictions */}
+        <div className="mt-6">
+          <p className="font-serif text-foreground text-sm mb-1">
+            Any dietary restrictions?
+          </p>
+          <input
+            type="text"
+            value={dietary}
+            onChange={(e) => setDietary(e.target.value)}
+            placeholder="e.g. vegetarian, gluten-free"
+            className="w-full bg-input rounded-lg px-4 py-3 font-serif text-foreground border border-border"
+          />
+        </div>
+
+        {/* Song Requests */}
+        <div className="mt-6">
+          <p className="font-serif text-foreground text-sm mb-1">
+            Song requests?
+          </p>
+          <input
+            type="text"
+            value={songs}
+            onChange={(e) => setSongs(e.target.value)}
+            placeholder="What should we play?"
+            className="w-full bg-input rounded-lg px-4 py-3 font-serif text-foreground border border-border"
+          />
+        </div>
+
+        {/* Additional Comments */}
+        <div className="mt-6">
+          <p className="font-serif text-foreground text-sm mb-1">
+            Any additional comments or questions?
+          </p>
+          <textarea
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+            placeholder="Let us know anything else..."
+            rows={4}
+            className="w-full bg-input rounded-lg px-4 py-3 font-serif text-foreground border border-border"
+          />
+        </div>
+
         {/* Submit */}
         <div className="text-center mt-8">
           <button
@@ -259,6 +307,27 @@ const RSVP = () => {
                 <p className="font-serif font-bold text-foreground">Email:</p>
                 <p className="font-serif text-foreground">
                   {email || "Not provided"}
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <p className="font-serif font-bold text-foreground">Dietary:</p>
+                <p className="font-serif text-foreground">
+                  {dietary || "None"}
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <p className="font-serif font-bold text-foreground">Song Requests:</p>
+                <p className="font-serif text-foreground">
+                  {songs || "None"}
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <p className="font-serif font-bold text-foreground">Comments:</p>
+                <p className="font-serif text-foreground">
+                  {comments || "None"}
                 </p>
               </div>
 
