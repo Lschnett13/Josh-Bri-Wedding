@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import heroImg from "../assets/hero_image.png";
+import heroImg from "../assets/hero_couple_3.jpeg";
+import heroMobile from "../assets/hero_couple_3_mobile.jpeg";
 import venueImage from "../assets/venue.jpg";
 import Header from "../components/Header";
 
@@ -33,7 +34,7 @@ export default function Home() {
             <Header />
 
             {/* Hero */}
-            <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden">
+            {/* <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden">
                 <img
                     src={heroImg}
                     alt="Brianna and Josh"
@@ -42,6 +43,23 @@ export default function Home() {
                     height={1080}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background" />
+            </div> */}
+            <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden">
+            {/* Mobile image */}
+            <img
+                src={heroMobile}
+                alt="Brianna and Josh"
+                className="w-full h-full object-cover object-top md:hidden"
+            />
+
+            {/* Desktop image */}
+            <img
+                src={heroImg}
+                alt="Brianna and Josh"
+                className="hidden md:block w-full h-full object-cover object-top"
+            />
+
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background" />
             </div>
 
             {/* Names & Date */}
