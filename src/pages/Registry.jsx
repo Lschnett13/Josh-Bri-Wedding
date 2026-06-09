@@ -17,17 +17,8 @@ const Registry = () => {
               Honeymoon Fund
             </h2>
             <p className="font-serif text-foreground mt-4 text-sm md:text-base leading-relaxed">
-              We're so excited to celebrate our honeymoon together. If you'd like to contribute to our trip and help create lasting memories, you can do so below.
+              Your love and support mean the world to us. For guests who wish to contribute, a honeymoon fund will be available at the reception. Thank you for helping us celebrate the beginning of our married life together.            
             </p>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.preventDefault()} // prevents navigation
-              className="inline-flex items-center gap-2 mt-6 bg-secondary text-secondary-foreground font-serif font-bold text-lg px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Coming Soon <ExternalLink size={18} />
-            </a>
           </div>
 
           {/* Registry */}
@@ -39,13 +30,20 @@ const Registry = () => {
               If you'd like to celebrate with a gift, we've included a small registry below.
             </p>
             <a
-              href="#"
+              href="https://www.amazon.com/wedding/guest-view/3M1UUP221AX3S"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => e.preventDefault()} // prevents navigation
-              className="inline-flex items-center gap-2 mt-6 bg-secondary text-secondary-foreground font-serif font-bold text-lg px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 m-3 mt-6 bg-secondary text-secondary-foreground font-serif font-bold text-lg px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
             >
-              Coming Soon <ExternalLink size={18} />
+              Amazon <ExternalLink size={18} />
+            </a>
+            <a
+              href="https://www.crateandbarrel.com/gift-registry/brianna-zapata-and-joshua-dehart/r7568253"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 m-3 bg-secondary text-secondary-foreground font-serif font-bold text-lg px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+            >
+              Crate & Barrel <ExternalLink size={18} />
             </a>
           </div>
         </div>
