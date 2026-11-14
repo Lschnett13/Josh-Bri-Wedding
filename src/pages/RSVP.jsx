@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import MOCK_GUESTS from "../guest_list.json";
+import MOCK_GUESTS from "../final_guest_list.json";
 
 const RSVP = () => {
   const [selectedName, setSelectedName] = useState("");

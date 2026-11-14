@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     question: "What time should I arrive?",
-    answer: "TBD",
+    answer: "Please kindly arrive no later than 3:30 PM to ensure parking and to enjoy the before; as ceremony promptly starts at 4:00 PM!",
   },
   {
     question: "Where is the Wedding Ceremony and Reception?",

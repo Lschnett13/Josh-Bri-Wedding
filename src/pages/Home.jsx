@@ -109,11 +109,11 @@ export default function Home() {
                 <div className="mt-4 font-serif text-foreground space-y-3">
                     <div>
                     <p className="font-bold">Wedding Ceremony:</p>
-                    <p>Time TBD</p>
+                    <p>4:00 PM</p>
                     </div>
                     <div>
                     <p className="font-bold">Reception:</p>
-                    <p>Time TBD</p>
+                    <p>5:45 PM</p>
                     </div>
                 </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Home() {
 
                     <div className="relative w-full md:w-1/2 max-w-md">
                         <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.0!2d-95.75!3d30.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDEyJzAwLjAiTiA5NcKwNDUnMDAuMCJX!5e0!3m2!1sen!2sus!4v1"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3447.586873947747!2d-95.5251993!3d30.2203365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864731cebfa96935%3A0x1ad33d4a6c3ad8b0!2sThe%20Blue%20Magnolia!5e0!3m2!1sen!2sus!4v1794693339240!5m2!1sen!2sus"
                         className="w-full aspect-5/3 border-0 "
                         allowFullScreen
                         loading="lazy"
